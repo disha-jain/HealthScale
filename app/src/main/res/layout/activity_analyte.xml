@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.innamed.healthscale.AnalyteActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:textColor="@color/green"
+                android:id="@+id/analyte_name"/>
+            <com.jjoe64.graphview.GraphView
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip"
+                android:id="@+id/graph" />
+            <TableLayout
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:stretchColumns="*"
+                android:layout_height="wrap_content"
+                android:id="@+id/test_results">
+                <TableRow
+                    android:layout_width="match_parent">
+                    <TextView
+                        android:gravity="center"
+                        android:fontFamily="serif"
+                        android:text="Date"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:gravity="center"
+                        android:text="Test Level"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:fontFamily="serif"/>
+                    <TextView
+                        android:gravity="center"
+                        android:fontFamily="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:text="So What?"/>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+</RelativeLayout>
